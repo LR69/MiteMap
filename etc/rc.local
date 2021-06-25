@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# rc.local
+#
+# version miteMapv4 du 8/05/20
+
+which bash
+
+exec 2>> /var/log/miteMap.log      # send stderr from rc.local to a log file
+exec 1>> /var/log/miteMap.log      # send stdout to the same log file
+set -x                         # tell sh to display commands before execution
+
+#echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
+#sudo hwclock -s
+
+dt=`date '+%d/%m/%Y_%H:%M:%S'`
+echo "$dt"
+
+conf="/var/www/html/miteMap.conf"
+if [ -f $conf ]; then
+  source $conf
+  echo "durée de l'enregistrement (fichier conf) : $duree"
+else
+  duree=20
+  mode=video
+  duree_video=10
+  interval_video=240
+  echo "durée de l'enregistrement (valeur par défaut) : $duree"
+fi
+fichier="/root/miteMap/miteMapV5.py"
+if [ -f $fichier ]; then
+  echo "$dt : Lancement de miteThru en mode $mode"
+  if [ "$mode" = "video" ]; then
+    python3 $fichier video $duree $duree_video $interval_video 1>>/var/log/miteMap.log 2>>/var/log/miteMap.log
+  else
+    python3 $fichier normal $duree 1>>/var/log/miteMap.log 2>>/var/log/miteMap.log
+  fi
+else
+  echo "Erreur : ficher $fichier introuvable"
+fi
+
+exit 0
+

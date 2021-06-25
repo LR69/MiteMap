@@ -1,0 +1,8 @@
+/var/log/miteMap.log {
+        monthly
+        size 1M
+        rotate 12
+        missingok
+        notifempty
+        create 644 root root
+}

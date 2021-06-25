@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MiteMap</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/mite.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/menus.css">
+<!--===============================================================================================-->
+
+</head>
+
+<body>
+	<div id="bloc_page">
+		<!--#include file="header.html" -->
+
+	<h3> Ces images sont renouvellées toutes les 5 secondes environ</h3>
+
+	<h2>Image traitée</h2>
+		<p align="center"><img src=images_bugcount/live/image_traitee.jpg id=imageT></p>
+
+	<h2>Image brute</h2>
+		<p align="center"><img src=images_bugcount/live/image_brute.jpg id=imageB></p>
+
+	</div>
+    <script type="text/javascript">
+		var myVar = setInterval(rafraichirCam, 500);
+		
+		
+		function rafraichirCam()
+		{
+			var imgB = document.getElementById('imageB');
+			if (imgB.complete) {
+				document.getElementById('imageB').src = imgB.src + "?" + Math.random(1);
+			}
+			var imgT = document.getElementById('imageT');
+			if (imgT.complete) {
+				document.getElementById('imageT').src = imgT.src + "?" + Math.random(1);
+			}
+		}
+
+    </script>
+
+</body>
+<footer height="200">
+<p align="center"> L.Roy <a href="mailto:Lise.ROY@cefe.cnrs.fr">Lise.ROY@cefe.cnrs.fr </a> - CEFE - CNRS - 34090 Montpellier</p>
+</html>
