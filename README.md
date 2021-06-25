@@ -40,13 +40,15 @@ The MiteMap uses a board equipped with LEDs and Push Buttons to start, stop and 
 
 Connect the +5V power supply wires of the raspberry motherboard (brown and white wire), the +12V power supply of the circuit (wires coming from the AC/DC adapter), and the 2 wires of the infrared LEDs to the terminal block of the electronic board, as shown below. Make sure that the AC/DC adapter is not connected to the 230VAC wall socket during the connection operations.
 
-![Wiring the MiteMap](https://raw.githubusercontent.com/LR69/MiteMap/13ed3ae31b86cde93fee49e4570fd6415c4f30e0/images/MT_Wiring.svg)
+![Wiring the MiteMap](https://raw.githubusercontent.com/LR69/MiteMap/master/images/MT01_images_traitees2020_05_09_20h16m57s.gif)
+
+
 
 ## Operating the MiteMap
 
 3 push buttons are present on the [electronic board](https://github.com/LR69/MiteThru/tree/master/electronic%20board) :
 
-![MT_Buttons](https://raw.githubusercontent.com/LR69/MiteMap/13ed3ae31b86cde93fee49e4570fd6415c4f30e0/images/MT_Buttons.svg)
+![MT_Buttons](https://raw.githubusercontent.com/LR69/MiteThru/13ed3ae31b86cde93fee49e4570fd6415c4f30e0/images/MT_Buttons.svg)
 
 ## Start Acquisition 
 Press the **<a name="start_BP">Start/Stop button</a>** for at least 3 seconds 
