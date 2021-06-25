@@ -3,7 +3,7 @@ MiteMap is a raspberry based system used to track a mite inside an arena. The ar
 
 
 
-![Arena](images/arena_smple.png)
+![Arena](schematics/arena_smple.png)
 
 
 
@@ -112,7 +112,7 @@ This tab can also be used to trigger automatically video acquisitions, on a cert
 On this page, two images are continuously updated by the program. 
 
 1. The first image is the raw image take by the camera,
-    ![image_brute_2020_05_09_20h16m50s.652041.jpg](https://github.com/LR69/MiteMap/blob/master/images/image_brute_2020_05_09_20h16m50s.652041.jpg?raw=true)
+    ![image_brute_2020_05_09_20h16m50s.652041.jpg](images/image_brute_2020_05_09_20h16m50s.652041.jpg?raw=true)
 2. On the second image, elements related to image processing have been added.
-   ![imag_traitée](https://raw.githubusercontent.com/LR69/MiteMap/master/images/image_traitee_2020_05_09_20h16m50s.652041.jpg)
+   ![imag_traitée](images/image_traitee_2020_05_09_20h16m50s.652041.jpg)
 
