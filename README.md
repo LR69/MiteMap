@@ -3,13 +3,13 @@ MiteMap is a raspberry based system used to track a mite inside an arena. The ar
 
 
 
-![Arena](https://github.com/LR69/MiteMap/blob/master/schematics/arena_smple.png?raw=true)
+![Arena](images/arena_smple.png)
 
 
 
 Video capture of a mite tracking inside the area :
 
-![Animated View of Arena](https://raw.githubusercontent.com/LR69/MiteMap/master/MT01_images_traitees2020_05_09_20h16m57s.gif)  
+![Animated Arena](images/MT01_images_traitees2020_05_09_20h16m57s.gif)  
 
 
 
@@ -28,7 +28,7 @@ This MiteMap system uses :
   - one locally impregnated, at a well-identified lateral point, with the compound to be tested
     one petri dish containing an infrared LED strip (940 nm).
 
-![Exploded View](https://raw.githubusercontent.com/LR69/MiteMap/master/schematics/exploded_view.png)
+![Exploded View](schematics/exploded_view.png)
 
 
 
@@ -42,7 +42,7 @@ The MiteMap uses a board equipped with LEDs and Push Buttons to start, stop and 
 
 Connect the +5V power supply wires of the raspberry motherboard (brown and white wire), the +12V power supply of the circuit (wires coming from the AC/DC adapter), and the 2 wires of the infrared LEDs to the terminal block of the electronic board, as shown below. Make sure that the AC/DC adapter is not connected to the 230VAC wall socket during the connection operations.
 
-![Wiring the MiteMap](https://raw.githubusercontent.com/LR69/MiteMap/master/images/MT01_images_traitees2020_05_09_20h16m57s.gif)
+![Wiring the MiteMap](images/MT_Wiring.svg)
 
 
 
@@ -50,7 +50,7 @@ Connect the +5V power supply wires of the raspberry motherboard (brown and white
 
 3 push buttons are present on the [electronic board](https://github.com/LR69/MiteThru/tree/master/electronic%20board) :
 
-![MT_Buttons](https://raw.githubusercontent.com/LR69/MiteThru/13ed3ae31b86cde93fee49e4570fd6415c4f30e0/images/MT_Buttons.svg)
+![MT_Buttons](images/MT_Buttons.svg)
 
 ## Start Acquisition 
 Press the **<a name="start_BP">Start/Stop button</a>** for at least 3 seconds 
@@ -93,7 +93,7 @@ The MiteMap is then cleared.
 
 The MiteMap embeds an Apache 2 server which provides a Web Interface, written in `html` and `php`. To access the interface, connect the MiteMap using Wifi or with an Ethernet cable. Then open a Browser and type the IP address of the MiteMap. The main page of the MiteMap shows a Heat Map representing the distribution of the mite inside the arena :
 
-![Heat_Map](https://raw.githubusercontent.com/LR69/MiteMap/master/images/MT01_carte_thermique_2020_05_08_19h12m09s.png)
+![Heat_Map](images/MT01_carte_thermique_2020_05_08_19h12m09s.png)
 
 
 
