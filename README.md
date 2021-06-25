@@ -34,6 +34,8 @@ This MiteMap system uses :
 
 # Commissioning
 
+Here is a brief summary. For more detailed explanations see the [operating instructions manual](https://github.com/LR69/MiteMap/blob/master/13_mai_2020_miteMapV4_Mise_en_service.pdf) (in French)
+
 ## Connecting the miteMap
 
 The MiteMap uses a board equipped with LEDs and Push Buttons to start, stop and reset acquisitions locally. The board also power the IR LEDs illuminating the mites. All the schematics and Typon of the board can be found in the "[electronic board](https://github.com/LR69/MiteThru/tree/master/electronic%20board)" folder of this repository.
