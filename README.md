@@ -36,7 +36,7 @@ This MiteMap system uses :
 
 ## Connecting the miteMap
 
-The MiteMap uses a board equipped with LEDs and Push Buttons to start, stop and reset acquisitions locally. The board also power the IR LEDs illuminating the mites. All the schematics and Typon of the board can be found in the "[electronic board](https://github.com/LR69/MiteMap/tree/master/electronic%20board)" folder of this repository.
+The MiteMap uses a board equipped with LEDs and Push Buttons to start, stop and reset acquisitions locally. The board also power the IR LEDs illuminating the mites. All the schematics and Typon of the board can be found in the "[electronic board](https://github.com/LR69/MiteThru/tree/master/electronic%20board)" folder of this repository.
 
 Connect the +5V power supply wires of the raspberry motherboard (brown and white wire), the +12V power supply of the circuit (wires coming from the AC/DC adapter), and the 2 wires of the infrared LEDs to the terminal block of the electronic board, as shown below. Make sure that the AC/DC adapter is not connected to the 230VAC wall socket during the connection operations.
 
@@ -44,7 +44,7 @@ Connect the +5V power supply wires of the raspberry motherboard (brown and white
 
 ## Operating the MiteMap
 
-3 push buttons are present on the [electronic board](https://github.com/LR69/MiteMap/tree/master/electronic%20board) :
+3 push buttons are present on the [electronic board](https://github.com/LR69/MiteThru/tree/master/electronic%20board) :
 
 ![MT_Buttons](https://raw.githubusercontent.com/LR69/MiteMap/13ed3ae31b86cde93fee49e4570fd6415c4f30e0/images/MT_Buttons.svg)
 
