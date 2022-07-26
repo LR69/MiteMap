@@ -24,6 +24,7 @@ import arene
 mode = sys.argv[1] # "normal" ou "calib" ou "debugI"
 # niveau de verbosité (debug1 : peu verbeux à debug8 très verbeux)
 # debug = 9 : forçage du démarrage
+# version miteMapv6 du 16/05/22 : correction de coordonnées du fichier de données brutes. Origine = centre de l'arène.
 debug=0
 if len(mode) == 6:
 	if mode[:5] == "debug":
@@ -399,7 +400,7 @@ while(True):
 			if 'tps_ZT_C' in locals(): # des données ont été analysées
 				tabC = [tps_ZT_C, tps_ZNT_C, tps_ZT_C_m, tps_ZNT_C_m, dist_parcourue_zC_mm, distance_parcourue_mm - dist_parcourue_zC_mm]
 				tabD = [tps_ZT_D, tps_ZNT_D, tps_ZT_D_m, tps_ZNT_D_m, dist_parcourue_zD_mm, distance_parcourue_mm - dist_parcourue_zD_mm]
-				bugcount_utils.package_data(resolution, aca.tableau_pos, Donnees_traitees_formeC=tabC, Donnees_traitees_formeD=tabD )
+				bugcount_utils.package_data(arena.centre_arene, resolution, aca.tableau_pos, Donnees_traitees_formeC=tabC, Donnees_traitees_formeD=tabD )
 				print("données archivées")
 			else: # pas de données
 				bugcount_utils.pas_data()

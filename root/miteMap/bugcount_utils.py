@@ -13,6 +13,7 @@ import numpy as np
 # Ce module comporte tous les outils nécessaires à la gestions des fichiers et de l'interface web
 # version mietMapv3 du 3/05/20 : tempo avant archivage zip
 # version miteMapv4 du 8/05/20 : ajout durée si immo dans maj_tableau
+# version miteMapv6 du 16/05/22 : correction de coordonnées du fichier de données brutes. Origine = centre de l'arène.
 hostname = os.uname()[1]
 nom_fichier_data = hostname + ".zip"
 def reinit() :
@@ -170,7 +171,7 @@ def package_images(fourmi):
 	os.mkdir("/var/www/html/images_bugcount/images_brutes")
 	os.mkdir("/var/www/html/images_bugcount/images_traitees")
 
-def package_data(resolution, tableau_brut, **tableaux_traites):
+def package_data(origine, resolution, tableau_brut, **tableaux_traites):
 	""" Permet l'archivage des données en fin d'expérience"""
 	maintenant = datetime.datetime.now()
 	date2 = maintenant.strftime('%Y_%m_%d_')
@@ -180,8 +181,10 @@ def package_data(resolution, tableau_brut, **tableaux_traites):
 	# création des .csv à partir des tableaux de données
 	tab_float = tableau_brut.astype(float)
 	tab_float[:,0] *= 0.1 # temps en secondes
+	tab_float[:,1] -= origine[0] # changement de repère
 	tab_float[:,1] /= resolution # abscisse en mm
-	tab_float[:,2] /= resolution # ordonnée en mm
+	tab_float[:,2] -= origine[1] # changement de repère
+	tab_float[:,2] /= -(resolution) # ordonnée en mm
 	nom_fichier = hostname + "_donnees_brutes_" + date2 + heure2 +".csv"
 	chemin = dossier + nom_fichier 
 	np.savetxt(chemin, tab_float, delimiter='\t', header="t(s) \t x(mm) \t y(mm) \t Immobile (si =1)", fmt='%.1f')

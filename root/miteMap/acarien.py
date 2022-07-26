@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 from collections import deque
 from math import sqrt
+# version miteMapv6 du 16/05/22 : suppression de l'enregistrement dans self.tableau_pos dans register_pos
 
 class Acarien():
 	""" classe stockant toutes les informations propres à l'acarien présent dans l'arène. """
@@ -70,7 +71,7 @@ class Acarien():
 		self.rayon = cercle[1]
 		self.position=(x,y)
 		ligne=np.uint16([[ t, x, y, 0]])
-		self.tableau_pos=np.append(self.tableau_pos,ligne, axis=0)
+		#self.tableau_pos=np.append(self.tableau_pos,ligne, axis=0)
 		self.derpos.append(ligne)
 
 	def pasbouger(self, t):
